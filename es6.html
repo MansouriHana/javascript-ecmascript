@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #111;
+            color: #EEE;
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        .series-frame {
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border: 2px solid #EEE;
+            margin: 30px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <div class="series-frame">
+        <h2>The Story of Tau</h2>
+        <p id="info"></p>
+    </div>
+    <script>
+        // Create your variables here
+        // ==========================================
+
+        let numberOfSeasons = 6;
+        let numberOfEpisodes = 12;
+
+        // ==========================================
+
+        // Calculate totalShowTime here
+        // =====================================
+
+        let episodeTime = 45;
+        let commercialTime = 5;
+        let totalShowTime = (commercialTime + episodeTime) * numberOfEpisodes * numberOfSeasons;
+
+        // =====================================
+
+        let paragraph = document.querySelector('#info');
+        console.log(numberOfEpisodes);
+        console.log(numberOfSeasons);
+        console.log(paragraph);
+        paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season
+        Totale viewing Time ${totalShowTime} minutes`
+    </script>
+</body>
+
+</html>
