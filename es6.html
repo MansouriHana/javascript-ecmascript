@@ -36,13 +36,17 @@
         let numberOfSeasons = 6;
         let numberOfEpisodes = 12;
 
+        let episodeTime = 45;
+        let commercialTime = 5;
+
+        let episodeTitle = 'Emily in Paris';
+        let episodeDuration = 30;
+        let hasBeenWatched = true;
         // ==========================================
 
         // Calculate totalShowTime here
         // =====================================
 
-        let episodeTime = 45;
-        let commercialTime = 5;
         let totalShowTime = (commercialTime + episodeTime) * numberOfEpisodes * numberOfSeasons;
 
         // =====================================
@@ -52,7 +56,10 @@
         console.log(numberOfSeasons);
         console.log(paragraph);
         paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season
-        Totale viewing Time ${totalShowTime} minutes`
+        Totale viewing Time ${totalShowTime} minutes
+        Episode Title: ${episodeTitle}
+        Duration: ${episodeDuration}
+       ${hasBeenWatched ? "Already watched": "Not yet watched"}`
     </script>
 </body>
 
